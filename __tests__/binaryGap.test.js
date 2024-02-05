@@ -1,5 +1,4 @@
-const { benchmarkSuite } = require("jest-bench");
-const { BinaryGap } = require("./binaryGap");
+const { BinaryGap } = require("../src/binaryGap");
 
 const testCases = [
   {"given": [1], "returns": 0},
@@ -16,7 +15,7 @@ describe("correctness", () => {
     for(let testCase of testCases) {
       const returned = BinaryGap.firstSolution(...testCase["given"]);
       const expected = testCase["returns"];
-
+      
       expect(returned).toBe(expected);
     };
   });
@@ -25,15 +24,8 @@ describe("correctness", () => {
     for(let testCase of testCases) {
       const returned = BinaryGap.secondSolution(...testCase["given"]);
       const expected = testCase["returns"];
-
+      
       expect(returned).toBe(expected);
     };
   });
-});
-
-const performanceCase = [2147483647];
-
-benchmarkSuite("BinaryGap", {
-  "first solution": () => BinaryGap.firstSolution(...performanceCase),
-  "second solution": () => BinaryGap.secondSolution(...performanceCase),
 });

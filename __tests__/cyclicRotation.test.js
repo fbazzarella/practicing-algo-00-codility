@@ -1,5 +1,4 @@
-const { benchmarkSuite } = require("jest-bench");
-const { CyclicRotation } = require("./cyclicRotation");
+const { CyclicRotation } = require("../src/cyclicRotation");
 
 const testCases = [
   {"given": [[3, 8, 9, 7, 6], 0], "returns": [3, 8, 9, 7, 6]},
@@ -16,11 +15,4 @@ describe("correctness", () => {
       expect(returned).toBe(expected);
     };
   });
-});
-
-const performanceCase = [[3, 8, 9, 7, 6], 3];
-
-benchmarkSuite("CyclicRotation", {
-  "first solution": () => CyclicRotation.firstSolution(...performanceCase),
-  // "second solution": () => CyclicRotation.secondSolution(...performanceCase),
 });

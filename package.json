@@ -4,6 +4,7 @@
     "jest-bench": "^27.5.1"
   },
   "scripts": {
-    "test": "jest --projects jest-bench.config.json"
+    "test": "jest",
+    "bench": "jest --projects jest-bench.config.json"
   }
 }
