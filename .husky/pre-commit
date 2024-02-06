@@ -1,0 +1,3 @@
+npx jest
+npm run fix
+git add .
