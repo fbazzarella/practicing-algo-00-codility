@@ -1,20 +1,36 @@
 class CyclicRotation {
   static firstSolution(A, K) {
-    let i = 0;
+    const n = A.length;
 
-    let rotatedArray = A;
-    let lastIndex = rotatedArray.length - 1;
+    let i = 0;
     let lastElement;
 
     while(i++ < K) {
-      lastElement = rotatedArray[lastIndex];
+      lastElement = A[n - 1];
 
-      for(let j = lastIndex; j >= 0; j--) {
-        rotatedArray[j] = (j > 0 ? rotatedArray[j - 1] : lastElement);
-      };
+      for(let j = n - 1; j >= 0; j--) A[j] = (j > 0 ? A[j - 1] : lastElement);
     };
 
-    return rotatedArray;
+    return A;
+  };
+
+  static secondSolution(A, K) {
+    const n = A.length;
+
+    if(n == K || n == 0 || K == 0 || K % n == 0) return A;
+
+    K %= n;
+
+    let i = 0;
+    let lastElement;
+
+    while(i++ < K) {
+      lastElement = A[n - 1];
+
+      for(let j = n - 1; j >= 0; j--) A[j] = (j > 0 ? A[j - 1] : lastElement);
+    };
+
+    return A;
   };
 };
 

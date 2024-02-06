@@ -19,7 +19,7 @@ class BinaryGap {
   static secondSolution(N) {
     const binaryRepr = N.toString(2);
     const gaps = binaryRepr.match(/(?<=1)0+(?=1)/g);
-    
+
     return (gaps ? Math.max(...gaps.map(e => e.length)) : 0);
   };
 };
