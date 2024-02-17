@@ -1,16 +1,10 @@
 {
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "husky": "^9.0.10",
     "jest": "^27.5.1",
-    "jest-bench": "^27.5.1",
-    "prettier": "^3.2.5"
+    "jest-bench": "^27.5.1"
   },
   "scripts": {
     "test": "jest --watchAll",
-    "bench": "jest --projects jest-bench.config.json",
-    "fix": "prettier . --write && eslint . --fix",
-    "prepare": "husky"
+    "bench": "jest --projects jest-bench.config.json"
   }
 }
