@@ -1,14 +1,11 @@
 const { benchmarkSuite } = require("jest-bench");
 const { OddOccurrencesInArray } = require("../src/oddOccurrencesInArray");
 
-const length = 499999;
-const ceil = 1000000;
-const sample = Array.from(
-  { length: length },
-  () => Math.floor(Math.random() * ceil) + 1
+const sample = Array.from({ length: 499999 }, () =>
+  Math.floor(Math.random() * 1000000) + 1
 );
 
-const performanceCase = [sample.concat([ceil]).concat(sample)];
+const performanceCase = [sample.concat([1000000]).concat(sample)];
 
 benchmarkSuite("OddOccurrencesInArray", {
   "first solution": () =>
