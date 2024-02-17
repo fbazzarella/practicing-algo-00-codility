@@ -1,7 +1,6 @@
 class BinaryGap {
   static firstSolution(N) {
     const binaryRepr = N.toString(2);
-
     let longestGap = 0;
     let currentGap = 0;
 
@@ -20,7 +19,13 @@ class BinaryGap {
     const binaryRepr = N.toString(2);
     const gaps = binaryRepr.match(/(?<=1)0+(?=1)/g);
 
-    return gaps ? Math.max(...gaps.map((e) => e.length)) : 0;
+    if (!gaps) return 0;
+
+    let longestGap = 0;
+
+    for (let gap of gaps) if (gap.length > longestGap) longestGap = gap.length;
+
+    return longestGap;
   }
 }
 

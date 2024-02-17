@@ -1,7 +1,6 @@
 class CyclicRotation {
   static firstSolution(A, K) {
     const n = A.length;
-
     let i = 0;
     let lastElement;
 

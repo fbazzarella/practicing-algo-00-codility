@@ -23,7 +23,7 @@ describe("correctness", () => {
   test("first solution", () => {
     for (let testCase of testCases) {
       const received = CyclicRotation.firstSolution(
-        ...testCase.given,
+        ...testCase.given
       ).toString();
       const expected = testCase.returns.toString();
 
@@ -34,7 +34,7 @@ describe("correctness", () => {
   test("second solution", () => {
     for (let testCase of testCases) {
       const received = CyclicRotation.secondSolution(
-        ...testCase.given,
+        ...testCase.given
       ).toString();
       const expected = testCase.returns.toString();
 
