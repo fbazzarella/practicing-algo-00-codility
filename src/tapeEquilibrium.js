@@ -1,6 +1,6 @@
 class TapeEquilibrium {
   static firstSolution(A) {
-    let n = A.length;
+    const n = A.length;
     let shortestDiff = Number.POSITIVE_INFINITY;
 
     for (let i = 1; i < n; i++) A[i] += A[i - 1];

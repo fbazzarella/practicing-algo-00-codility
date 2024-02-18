@@ -1,6 +1,6 @@
 class PermMissingElem {
   static firstSolution(A) {
-    let n = A.length;
+    const n = A.length;
     let rightPlaces = [];
 
     for (let i = 0; i < n; i++) {
@@ -15,7 +15,7 @@ class PermMissingElem {
   }
 
   static secondSolution(A) {
-    let n = A.length;
+    const n = A.length;
     let missingElement;
     let tempElement;
 
