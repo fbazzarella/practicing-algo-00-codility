@@ -2,10 +2,6 @@ class NewProblem {
   static firstSolution(_) {
     return _;
   }
-
-  static secondSolution(_) {
-    return _;
-  }
 }
 
 module.exports = { NewProblem };

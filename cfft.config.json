@@ -1,0 +1,19 @@
+{
+  "defaultTemplateName": "default",
+  "templates": [
+    {
+      "name": "default",
+      "options": {
+        "templatePath": "/.cfft.templates",
+        "dirPath": ".",
+        "fileNameTextToBeReplaced": "NewProblem",
+        "searchAndReplace": [
+          {
+            "search": "NewProblem",
+            "replace": "{fileName}"
+          }
+        ]
+      }
+    }
+  ]
+}
