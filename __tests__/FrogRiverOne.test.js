@@ -1,4 +1,4 @@
-const { FrogRiverOne } = require("../src/frogRiverOne");
+const { FrogRiverOne } = require("../src/FrogRiverOne");
 
 describe("correctness", () => {
   let testCases;

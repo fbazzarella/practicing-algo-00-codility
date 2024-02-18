@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { FrogJmp } = require("../src/frogJmp");
+const { FrogJmp } = require("../src/FrogJmp");
 
 const performanceCase = [10, 85, 30];
 

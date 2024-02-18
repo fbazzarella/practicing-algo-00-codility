@@ -1,8 +1,9 @@
 const { benchmarkSuite } = require("jest-bench");
-const { OddOccurrencesInArray } = require("../src/oddOccurrencesInArray");
+const { OddOccurrencesInArray } = require("../src/OddOccurrencesInArray");
 
-const sample = Array.from({ length: 499999 }, () =>
-  Math.floor(Math.random() * 1000000) + 1
+const sample = Array.from(
+  { length: 499999 },
+  () => Math.floor(Math.random() * 1000000) + 1
 );
 
 const performanceCase = [sample.concat([1000000]).concat(sample)];

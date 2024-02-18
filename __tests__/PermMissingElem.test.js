@@ -1,4 +1,4 @@
-const { PermMissingElem } = require("../src/permMissingElem");
+const { PermMissingElem } = require("../src/PermMissingElem");
 
 describe("correctness", () => {
   let testCases;

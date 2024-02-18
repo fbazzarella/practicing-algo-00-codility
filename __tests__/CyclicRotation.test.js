@@ -1,4 +1,4 @@
-const { CyclicRotation } = require("../src/cyclicRotation");
+const { CyclicRotation } = require("../src/CyclicRotation");
 
 describe("correctness", () => {
   let testCases;

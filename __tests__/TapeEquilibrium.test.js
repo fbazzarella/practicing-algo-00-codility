@@ -1,4 +1,4 @@
-const { TapeEquilibrium } = require("../src/tapeEquilibrium");
+const { TapeEquilibrium } = require("../src/TapeEquilibrium");
 
 describe("correctness", () => {
   let testCases;

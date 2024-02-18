@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { TapeEquilibrium } = require("../src/tapeEquilibrium");
+const { TapeEquilibrium } = require("../src/TapeEquilibrium");
 
 const sample = Array.from({ length: 100000 }, () =>
   Math.floor(Math.random() * 100)

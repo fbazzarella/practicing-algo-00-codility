@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { CyclicRotation } = require("../src/cyclicRotation");
+const { CyclicRotation } = require("../src/CyclicRotation");
 
 const performanceCase = [Array(100).fill(0), 1999];
 

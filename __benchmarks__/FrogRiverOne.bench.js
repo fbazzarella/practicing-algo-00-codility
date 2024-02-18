@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { FrogRiverOne } = require("../src/frogRiverOne");
+const { FrogRiverOne } = require("../src/FrogRiverOne");
 
 let sample = Array.from(Array(100000).keys());
 sample.shift();

@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { PermMissingElem } = require("../src/permMissingElem");
+const { PermMissingElem } = require("../src/PermMissingElem");
 
 let sample = Array.from(Array(100000).keys());
 sample.shift();

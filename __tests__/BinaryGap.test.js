@@ -1,4 +1,4 @@
-const { BinaryGap } = require("../src/binaryGap");
+const { BinaryGap } = require("../src/BinaryGap");
 
 describe("correctness", () => {
   let testCases;

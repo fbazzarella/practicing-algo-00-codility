@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { PermCheck } = require("../src/permCheck");
+const { PermCheck } = require("../src/PermCheck");
 
 let sample = Array.from(Array(100000).keys());
 sample.shift();

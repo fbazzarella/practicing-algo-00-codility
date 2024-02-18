@@ -1,5 +1,5 @@
 const { benchmarkSuite } = require("jest-bench");
-const { BinaryGap } = require("../src/binaryGap");
+const { BinaryGap } = require("../src/BinaryGap");
 
 const performanceCase = [2147483647];
 

@@ -1,4 +1,4 @@
-const { OddOccurrencesInArray } = require("../src/oddOccurrencesInArray");
+const { OddOccurrencesInArray } = require("../src/OddOccurrencesInArray");
 
 describe("correctness", () => {
   let testCases;
