@@ -7,9 +7,8 @@ class OddOccurrencesInArray {
       else occurrences[A[i]]++;
     }
 
-    for (let i = 0; i < occurrences.length; i++) {
+    for (let i = 0; i < occurrences.length; i++)
       if (occurrences[i] % 2 == 1) return i;
-    }
   }
 
   static secondSolution(A) {
