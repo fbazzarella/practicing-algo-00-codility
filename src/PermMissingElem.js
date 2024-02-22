@@ -3,13 +3,9 @@ class PermMissingElem {
     const n = A.length;
     let rightPlaces = [];
 
-    for (let i = 0; i < n; i++) {
-      rightPlaces[A[i]] = true;
-    }
+    for (let i = 0; i < n; i++) rightPlaces[A[i]] = true;
 
-    for (let i = 1; i < rightPlaces.length; i++) {
-      if (!rightPlaces[i]) return i;
-    }
+    for (let i = 1; i < rightPlaces.length; i++) if (!rightPlaces[i]) return i;
 
     return n + 1;
   }

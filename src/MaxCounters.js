@@ -33,9 +33,8 @@ class MaxCounters {
       } else if (A[i] == N + 1) startingLine = maxCounter;
     }
 
-    for (let i = 0; i < N; i++) {
+    for (let i = 0; i < N; i++)
       if (counters[i] < startingLine) counters[i] = startingLine;
-    }
 
     return counters;
   }
