@@ -1,10 +1,12 @@
 {
   "devDependencies": {
     "jest": "^27.5.1",
-    "jest-bench": "^27.5.1"
+    "jest-bench": "^27.5.1",
+    "@beezydev/create-files-from-template-cli": "^1.5.0"
   },
   "scripts": {
     "test": "jest --watchAll",
-    "bench": "jest --projects jest-bench.config.json"
+    "bench": "jest --projects jest-bench.config.json",
+    "new": "cfft -n"
   }
 }

@@ -1,0 +1,3 @@
+{
+  "testRegex": "(?<!NewProblem)\\.test\\.(ts|tsx|js)$"
+}
