@@ -70,6 +70,34 @@ class GenomicRangeQuery {
 
     return minFactors;
   }
+
+  static thirdSolution(S, P, Q) {
+    let verifyFactor = (positions, P, Q, minFactors, question, factor) => {
+      for (let position of positions) {
+        if (P <= position && position <= Q) {
+          minFactors[question] = factor;
+          return true;
+        }
+      }
+
+      return false;
+    };
+
+    let bases = { A: 1, C: 2, G: 3, T: 4 };
+    let positions = { A: [], C: [], G: [], T: [] };
+    let minFactors = [];
+
+    for (let i = 0; i < S.length; i++) positions[S[i]].push(i);
+
+    loop1: for (let i = 0; i < P.length; i++) {
+      for (let [base, factor] of Object.entries(bases)) {
+        if (verifyFactor(positions[base], P[i], Q[i], minFactors, i, factor))
+          continue loop1;
+      }
+    }
+
+    return minFactors;
+  }
 }
 
 module.exports = { GenomicRangeQuery };

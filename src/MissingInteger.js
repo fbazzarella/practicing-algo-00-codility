@@ -7,7 +7,6 @@ class MissingInteger {
         let tempElement = A[A[i] - 1];
         A[A[i] - 1] = A[i];
         A[i] = tempElement;
-
         continue;
       }
 
