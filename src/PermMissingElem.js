@@ -13,7 +13,6 @@ class PermMissingElem {
   static secondSolution(A) {
     const n = A.length;
     let missingElement;
-    let tempElement;
 
     for (let i = 0; i < n; i++) {
       loop2: while (A[i] != i + 1) {
@@ -23,7 +22,7 @@ class PermMissingElem {
           break loop2;
         }
 
-        tempElement = A[A[i] - 1];
+        const tempElement = A[A[i] - 1];
         A[A[i] - 1] = A[i];
         A[i] = tempElement;
       }
