@@ -7,12 +7,12 @@ Feel free to learn something new or even to contribute with your solutions.
 ### TODOS:
 
 - Improve this README with:
-  - How to run the solution;
+  - How to create new solutions' files from templates;
+  - How to debug the solution;
   - How to run the automated tests;
   - How to run the benchmarks;
   - How to interpret the benchmarks;
   - How to contribute to the project;
-  - How to create new solutions' files from templates;
 
 - The solutions themselves:
   - Solve as much as possible all the proposed solutions;
