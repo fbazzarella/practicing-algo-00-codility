@@ -20,3 +20,5 @@ class CountFactors {
 }
 
 module.exports = { CountFactors };
+
+CountFactors.secondSolution(30);
