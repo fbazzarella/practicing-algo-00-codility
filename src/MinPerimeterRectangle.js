@@ -5,9 +5,8 @@ class MinPerimeterRectangle {
     if (Number.isInteger(sqrt)) return sqrt * 4;
 
     let minPerimeter = (N + 1) * 2;
-    let i = 2;
 
-    while (i * i < N) {
+    for (let i = 2; i * i < N; i++) {
       if (N % i == 0) {
         let perimeter = (i + N / i) * 2;
 
@@ -19,8 +18,6 @@ class MinPerimeterRectangle {
 
         if (perimeter < minPerimeter) minPerimeter = perimeter;
       }
-
-      i++;
     }
 
     return minPerimeter;

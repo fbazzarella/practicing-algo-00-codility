@@ -11,7 +11,7 @@ class CountFactors {
     let i = 1;
     let factorsCount = 0;
 
-    while (i * i < N) if (N % i++ == 0) factorsCount += 2;
+    for (; i * i < N; i++) if (N % i == 0) factorsCount += 2;
 
     if (i * i == N) factorsCount++;
 
@@ -20,5 +20,3 @@ class CountFactors {
 }
 
 module.exports = { CountFactors };
-
-CountFactors.secondSolution(30);
