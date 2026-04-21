@@ -6,4 +6,5 @@ const performanceCase = [1000000];
 benchmarkSuite("CountFactors", {
   "first solution": () => CountFactors.firstSolution(...performanceCase),
   "second solution": () => CountFactors.secondSolution(...performanceCase),
+  "third solution": () => CountFactors.thirdSolution(...performanceCase),
 });

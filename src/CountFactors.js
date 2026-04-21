@@ -17,6 +17,25 @@ class CountFactors {
 
     return factorsCount;
   }
+  static thirdSolution(N) {
+    let count = 1;
+    let temp = N;
+
+    for (let d = 2; d * d <= temp; d++) {
+      let exp = 0;
+
+      while (temp % d == 0) {
+        exp++;
+        temp = temp / d;
+      }
+
+      count *= exp + 1;
+    }
+
+    if (temp > 1) count *= 2;
+
+    return count;
+  }
 }
 
 module.exports = { CountFactors };
