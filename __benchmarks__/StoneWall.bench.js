@@ -1,8 +1,13 @@
 const { benchmarkSuite } = require("jest-bench");
 const { StoneWall } = require("../src/StoneWall");
 
-const performanceCase = [[8, 8, 5, 7, 9, 8, 7, 4, 8]];
+const sample = Array.from({ length: 5000 }, () =>
+  Math.floor(Math.random() * 100) + 1
+);
+const performanceCase = [sample];
 
 benchmarkSuite("StoneWall", {
   "first solution": () => StoneWall.firstSolution(...performanceCase),
+  "second solution": () => StoneWall.secondSolution(...performanceCase),
+  "third solution": () => StoneWall.thirdSolution(...performanceCase),
 });
