@@ -13,4 +13,6 @@ benchmarkSuite("OddOccurrencesInArray", {
     OddOccurrencesInArray.firstSolution(...performanceCase),
   "second solution": () =>
     OddOccurrencesInArray.secondSolution(...performanceCase),
+  "third solution": () =>
+    OddOccurrencesInArray.thirdSolution(...performanceCase),
 });
