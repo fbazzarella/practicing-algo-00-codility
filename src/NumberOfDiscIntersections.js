@@ -45,6 +45,32 @@ class NumberOfDiscIntersections {
 
     return intersectionCount;
   }
+  static thirdSolution(A) {
+    const n = A.length;
+    let opens = new Array(n).fill(0);
+    let closes = new Array(n).fill(0);
+
+    for (let i = 0; i < n; i++) {
+      let left = i - A[i] < 0 ? 0 : i - A[i];
+      let right = i + A[i] >= n ? n - 1 : i + A[i];
+
+      opens[left]++;
+      closes[right]++;
+    }
+
+    let intersections = 0;
+    let active = 0;
+
+    for (let i = 0; i < n; i++) {
+      intersections += active * opens[i] + (opens[i] * (opens[i] - 1)) / 2;
+
+      if (intersections > 10000000) return -1;
+
+      active += opens[i] - closes[i];
+    }
+
+    return intersections;
+  }
 }
 
 module.exports = { NumberOfDiscIntersections };

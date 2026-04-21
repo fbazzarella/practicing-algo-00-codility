@@ -14,4 +14,6 @@ benchmarkSuite("NumberOfDiscIntersections", {
     NumberOfDiscIntersections.firstSolution(...performanceCase),
   "second solution": () =>
     NumberOfDiscIntersections.secondSolution(...performanceCase),
+  "third solution": () =>
+    NumberOfDiscIntersections.thirdSolution(...performanceCase),
 });
