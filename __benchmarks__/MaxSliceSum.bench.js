@@ -11,4 +11,5 @@ const performanceCase = [sample];
 benchmarkSuite("MaxSliceSum", {
   "first solution": () => MaxSliceSum.firstSolution(...performanceCase),
   "second solution": () => MaxSliceSum.secondSolution(...performanceCase),
+  "third solution": () => MaxSliceSum.thirdSolution(...performanceCase),
 });

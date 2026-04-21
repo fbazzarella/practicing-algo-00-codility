@@ -39,6 +39,19 @@ class MaxSliceSum {
 
     return maxSlice;
   }
+  static thirdSolution(A) {
+    const n = A.length;
+    let maxSlice = A[0];
+    let maxEnding = A[0];
+
+    for (let i = 1; i < n; i++) {
+      maxEnding = A[i] > maxEnding + A[i] ? A[i] : maxEnding + A[i];
+
+      if (maxEnding > maxSlice) maxSlice = maxEnding;
+    }
+
+    return maxSlice;
+  }
 }
 
 module.exports = { MaxSliceSum };
