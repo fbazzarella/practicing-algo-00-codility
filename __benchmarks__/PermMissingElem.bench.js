@@ -11,4 +11,5 @@ const performanceCase = [sample];
 benchmarkSuite("PermMissingElem", {
   "first solution": () => PermMissingElem.firstSolution(...performanceCase),
   "second solution": () => PermMissingElem.secondSolution(...performanceCase),
+  "third solution": () => PermMissingElem.thirdSolution(...performanceCase),
 });

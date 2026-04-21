@@ -30,6 +30,15 @@ class PermMissingElem {
 
     return missingElement ?? n + 1;
   }
+  static thirdSolution(A) {
+    const n = A.length;
+    let expected = ((n + 1) * (n + 2)) / 2;
+    let actual = 0;
+
+    for (let i = 0; i < n; i++) actual += A[i];
+
+    return expected - actual;
+  }
 }
 
 module.exports = { PermMissingElem };
