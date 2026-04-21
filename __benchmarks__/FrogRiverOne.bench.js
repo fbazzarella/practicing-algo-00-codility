@@ -1,12 +1,11 @@
 const { benchmarkSuite } = require("jest-bench");
 const { FrogRiverOne } = require("../src/FrogRiverOne");
 
-let sample = Array.from(Array(1000000).keys());
-sample.shift();
-sample.sort(() => Math.random() - 0.5);
-
-const performanceCase = [5, sample];
+const sample = Array.from({ length: 3000 }, (_, i) => (i % 500) + 1);
+const performanceCase = [500, sample];
 
 benchmarkSuite("FrogRiverOne", {
   "first solution": () => FrogRiverOne.firstSolution(...performanceCase),
+  "second solution": () => FrogRiverOne.secondSolution(...performanceCase),
+  "third solution": () => FrogRiverOne.thirdSolution(...performanceCase),
 });
