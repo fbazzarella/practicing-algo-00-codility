@@ -66,6 +66,25 @@ class Fish {
 
     return eatingStack.length + fishAlive;
   }
+  static thirdSolution(A, B) {
+    let downstream = [];
+    let alive = 0;
+
+    for (let i = 0; i < A.length; i++) {
+      if (B[i] == 1) {
+        downstream.push(A[i]);
+      } else {
+        while (downstream.length > 0) {
+          if (downstream[downstream.length - 1] > A[i]) break;
+          downstream.pop();
+        }
+
+        if (downstream.length == 0) alive++;
+      }
+    }
+
+    return downstream.length + alive;
+  }
 }
 
 module.exports = { Fish };

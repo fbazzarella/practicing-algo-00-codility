@@ -13,4 +13,5 @@ const performanceCase = [sampleA, sampleB];
 benchmarkSuite("Fish", {
   "first solution": () => Fish.firstSolution(...performanceCase),
   "second solution": () => Fish.secondSolution(...performanceCase),
+  "third solution": () => Fish.thirdSolution(...performanceCase),
 });
