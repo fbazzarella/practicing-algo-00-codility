@@ -27,6 +27,25 @@ class BinaryGap {
 
     return longestGap;
   }
+  static thirdSolution(N) {
+    let longestGap = 0;
+    let currentGap = 0;
+    let foundOne = false;
+
+    while (N > 0) {
+      if (N & 1) {
+        if (foundOne && currentGap > longestGap) longestGap = currentGap;
+        currentGap = 0;
+        foundOne = true;
+      } else {
+        if (foundOne) currentGap++;
+      }
+
+      N >>= 1;
+    }
+
+    return longestGap;
+  }
 }
 
 module.exports = { BinaryGap };
