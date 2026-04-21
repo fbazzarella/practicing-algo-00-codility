@@ -1,6 +1,23 @@
 class PassingCars {
   static firstSolution(A) {
     const n = A.length;
+    let passingCars = 0;
+
+    for (let i = 0; i < n; i++) {
+      if (A[i] == 0) {
+        for (let j = i + 1; j < n; j++) {
+          if (A[j] == 1) passingCars++;
+        }
+
+        if (passingCars > 1000000000) return -1;
+      }
+    }
+
+    return passingCars;
+  }
+
+  static secondSolution(A) {
+    const n = A.length;
     let prefixSums = [A[0]].concat(Array(n - 1));
     let passingCars = 0;
 
@@ -15,6 +32,24 @@ class PassingCars {
     }
 
     return passingCars <= 1000000000 ? passingCars : -1;
+  }
+
+  static thirdSolution(A) {
+    const n = A.length;
+    let eastCount = 0;
+    let passingCars = 0;
+
+    for (let i = 0; i < n; i++) {
+      if (A[i] == 0) {
+        eastCount++;
+      } else {
+        passingCars += eastCount;
+
+        if (passingCars > 1000000000) return -1;
+      }
+    }
+
+    return passingCars;
   }
 }
 
