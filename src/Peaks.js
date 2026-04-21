@@ -46,6 +46,86 @@ class Peaks {
 
     return maxBlocksWithPeaks;
   }
+
+  static secondSolution(A) {
+    const n = A.length;
+
+    if (n <= 2) return 0;
+
+    let peakCount = Array(n).fill(0);
+
+    for (let i = 1; i < n - 1; i++) {
+      peakCount[i] = peakCount[i - 1];
+
+      if (A[i] > A[i - 1] && A[i] > A[i + 1]) peakCount[i]++;
+    }
+
+    peakCount[n - 1] = peakCount[n - 2];
+
+    if (peakCount[n - 1] == 0) return 0;
+
+    let maxBlocks = 0;
+
+    for (let blocks = 1; blocks <= n; blocks++) {
+      if (n % blocks != 0) continue;
+
+      let blockSize = n / blocks;
+      let allBlocksHavePeak = true;
+
+      for (let b = 0; b < blocks; b++) {
+        let start = b * blockSize;
+        let end = start + blockSize - 1;
+        let peaksBefore = start > 0 ? peakCount[start - 1] : 0;
+        let peaksInBlock = peakCount[end] - peaksBefore;
+
+        if (peaksInBlock == 0) {
+          allBlocksHavePeak = false;
+          break;
+        }
+      }
+
+      if (allBlocksHavePeak) maxBlocks = blocks;
+    }
+
+    return maxBlocks;
+  }
+
+  static thirdSolution(A) {
+    const n = A.length;
+
+    if (n <= 2) return 0;
+
+    let maxBlocks = 0;
+
+    for (let blocks = 1; blocks <= n; blocks++) {
+      if (n % blocks != 0) continue;
+
+      let blockSize = n / blocks;
+      let allBlocksHavePeak = true;
+
+      for (let b = 0; b < blocks; b++) {
+        let start = b * blockSize;
+        let end = start + blockSize;
+        let hasPeak = false;
+
+        for (let i = start; i < end; i++) {
+          if (i > 0 && i < n - 1 && A[i] > A[i - 1] && A[i] > A[i + 1]) {
+            hasPeak = true;
+            break;
+          }
+        }
+
+        if (!hasPeak) {
+          allBlocksHavePeak = false;
+          break;
+        }
+      }
+
+      if (allBlocksHavePeak) maxBlocks = blocks;
+    }
+
+    return maxBlocks;
+  }
 }
 
 module.exports = { Peaks };
