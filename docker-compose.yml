@@ -1,0 +1,8 @@
+services:
+  lepus:
+    build: .
+    volumes:
+      - ./src:/app/src
+      - ./__tests__:/app/__tests__
+      - ./__benchmarks__:/app/__benchmarks__
+    command: npm test
