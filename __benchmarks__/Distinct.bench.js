@@ -1,11 +1,13 @@
 const { benchmarkSuite } = require("jest-bench");
 const { Distinct } = require("../src/Distinct");
 
-let sample = Array.from(Array(1000000).keys());
-sample.sort(() => Math.random() - 0.5);
-
+const sample = Array.from({ length: 5000 }, () =>
+  Math.floor(Math.random() * 5000)
+);
 const performanceCase = [sample];
 
 benchmarkSuite("Distinct", {
   "first solution": () => Distinct.firstSolution(...performanceCase),
+  "second solution": () => Distinct.secondSolution(...performanceCase),
+  "third solution": () => Distinct.thirdSolution(...performanceCase),
 });

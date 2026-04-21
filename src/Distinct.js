@@ -1,33 +1,41 @@
 class Distinct {
   static firstSolution(A) {
-    const quickSort = (A) => {
-      const n = A.length;
+    const n = A.length;
+    let count = 0;
 
-      if (n <= 1) return A;
+    for (let i = 0; i < n; i++) {
+      let unique = true;
 
-      const pivot = A[0];
-      let left = [];
-      let right = [];
+      for (let j = 0; j < i; j++) {
+        if (A[j] == A[i]) {
+          unique = false;
+          break;
+        }
+      }
 
-      for (let i = 1; i < n; i++)
-        A[i] < pivot ? left.push(A[i]) : right.push(A[i]);
+      if (unique) count++;
+    }
 
-      return [...quickSort(left), pivot, ...quickSort(right)];
-    };
+    return count;
+  }
 
-    const sortedArray = quickSort(A);
+  static secondSolution(A) {
+    let sorted = A.slice().sort((a, b) => a - b);
+    let count = 0;
+    let last;
 
-    let distinctCount = 0;
-    let lastElement;
-
-    for (let i = 0; i < sortedArray.length; i++) {
-      if (sortedArray[i] != lastElement) {
-        distinctCount++;
-        lastElement = sortedArray[i];
+    for (let i = 0; i < sorted.length; i++) {
+      if (sorted[i] != last) {
+        count++;
+        last = sorted[i];
       }
     }
 
-    return distinctCount;
+    return count;
+  }
+
+  static thirdSolution(A) {
+    return new Set(A).size;
   }
 }
 
