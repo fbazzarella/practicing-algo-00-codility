@@ -31,6 +31,17 @@ class CyclicRotation {
 
     return A;
   }
+  static thirdSolution(A, K) {
+    const n = A.length;
+
+    if (n == 0 || K == 0) return A;
+
+    let k = K % n;
+
+    if (k == 0) return A;
+
+    return A.slice(n - k).concat(A.slice(0, n - k));
+  }
 }
 
 module.exports = { CyclicRotation };

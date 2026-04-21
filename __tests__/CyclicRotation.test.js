@@ -41,4 +41,15 @@ describe("correctness", () => {
       expect(received).toBe(expected);
     }
   });
+
+  test("third solution", () => {
+    for (let testCase of testCases) {
+      const received = CyclicRotation.thirdSolution(
+        ...testCase.given
+      ).toString();
+      const expected = testCase.returns.toString();
+
+      expect(received).toBe(expected);
+    }
+  });
 });
