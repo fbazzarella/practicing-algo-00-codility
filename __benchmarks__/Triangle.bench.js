@@ -13,4 +13,5 @@ const performanceCase = [sample];
 benchmarkSuite("Triangle", {
   "first solution": () => Triangle.firstSolution(...performanceCase),
   "second solution": () => Triangle.secondSolution(...performanceCase),
+  "third solution": () => Triangle.thirdSolution(...performanceCase),
 });
