@@ -27,4 +27,13 @@ describe("correctness", () => {
       expect(received).toBe(expected);
     }
   });
+
+  test("third solution", () => {
+    for (let testCase of testCases) {
+      const received = MaxCounters.thirdSolution(...testCase.given).toString();
+      const expected = testCase.returns.toString();
+
+      expect(received).toBe(expected);
+    }
+  });
 });

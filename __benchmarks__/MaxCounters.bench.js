@@ -10,4 +10,5 @@ const performanceCase = [sample.length, sample];
 benchmarkSuite("MaxCounters", {
   "first solution": () => MaxCounters.firstSolution(...performanceCase),
   "second solution": () => MaxCounters.secondSolution(...performanceCase),
+  "third solution": () => MaxCounters.thirdSolution(...performanceCase),
 });
