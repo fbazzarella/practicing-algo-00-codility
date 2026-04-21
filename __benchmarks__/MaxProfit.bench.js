@@ -10,4 +10,5 @@ const performanceCase = [sample];
 benchmarkSuite("MaxProfit", {
   "first solution": () => MaxProfit.firstSolution(...performanceCase),
   "second solution": () => MaxProfit.secondSolution(...performanceCase),
+  "third solution": () => MaxProfit.thirdSolution(...performanceCase),
 });

@@ -35,6 +35,22 @@ class MaxProfit {
 
     return maxProfit > 0 ? maxProfit : 0;
   }
+  static thirdSolution(A) {
+    const n = A.length;
+
+    if (n <= 1) return 0;
+
+    let minPrice = A[0];
+    let maxProfit = 0;
+
+    for (let i = 1; i < n; i++) {
+      if (A[i] - minPrice > maxProfit) maxProfit = A[i] - minPrice;
+
+      if (A[i] < minPrice) minPrice = A[i];
+    }
+
+    return maxProfit;
+  }
 }
 
 module.exports = { MaxProfit };
