@@ -75,6 +75,47 @@ class EquiLeader {
 
     return equiLeadersCount;
   }
+  static thirdSolution(A) {
+    const n = A.length;
+
+    if (n <= 1) return 0;
+
+    let candidate;
+    let count = 0;
+
+    for (let i = 0; i < n; i++) {
+      if (count == 0) {
+        candidate = A[i];
+        count = 1;
+      } else if (A[i] == candidate) {
+        count++;
+      } else {
+        count--;
+      }
+    }
+
+    let leaderCount = 0;
+
+    for (let i = 0; i < n; i++) {
+      if (A[i] == candidate) leaderCount++;
+    }
+
+    if (leaderCount <= Math.floor(n / 2)) return 0;
+
+    let leftCount = 0;
+    let equiLeaders = 0;
+
+    for (let i = 0; i < n - 1; i++) {
+      if (A[i] == candidate) leftCount++;
+
+      let rightCount = leaderCount - leftCount;
+
+      if (leftCount > (i + 1) / 2 && rightCount > (n - i - 1) / 2)
+        equiLeaders++;
+    }
+
+    return equiLeaders;
+  }
 }
 
 module.exports = { EquiLeader };

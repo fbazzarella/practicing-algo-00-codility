@@ -12,4 +12,5 @@ const performanceCase = [sample];
 benchmarkSuite("EquiLeader", {
   "first solution": () => EquiLeader.firstSolution(...performanceCase),
   "second solution": () => EquiLeader.secondSolution(...performanceCase),
+  "third solution": () => EquiLeader.thirdSolution(...performanceCase),
 });
