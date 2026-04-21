@@ -20,4 +20,22 @@ describe("correctness", () => {
       expect(received).toBe(expected);
     }
   });
+
+  test("second solution", () => {
+    for (let testCase of testCases) {
+      const received = Nesting.secondSolution(...testCase.given);
+      const expected = testCase.returns;
+
+      expect(received).toBe(expected);
+    }
+  });
+
+  test("third solution", () => {
+    for (let testCase of testCases) {
+      const received = Nesting.thirdSolution(...testCase.given);
+      const expected = testCase.returns;
+
+      expect(received).toBe(expected);
+    }
+  });
 });
